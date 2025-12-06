@@ -1,6 +1,17 @@
 # Duck Shooting Game
 
-A simple duck shooting game built with SFML and C++.
+A small arcade-style duck shooting game built in C++ using SFML. The game starts simple—with only slow yellow ducks—but becomes progressively harder as your score increases. More duck types begin appearing, movement speeds rise, and missing or hitting the wrong ducks costs you hearts. The goal is to survive as long as possible and end with the highest score you can.
+
+#Gameplay Overview
+1. Move the shooter using the arrow keys
+2. Shoot yellow ducks → +10 points
+3. Once you reach 30 points, green and brown ducks start appearing
+4. Hitting a non-yellow duck → –15 points
+5. Hitting two non-yellow ducks in a row → lose one heart
+6. Missing a yellow duck (letting it fly off the left side) → lose one heart
+7. You begin with 3 hearts. When hearts reach 0, the game ends.
+8. Duck speed increases as your score rises.
+9. The game starts with background sound/music.
 
 ## File Structure
 
@@ -63,3 +74,16 @@ make clean
 - Let 3 ducks escape and you lose
 - Press ESC to return to menu
 - Press ENTER to start/restart
+##Development Notes
+
+This project was completed collaboratively but with some version-control challenges.
+Romaisa had issues committing through Git (which is why the repository shows fewer commits than expected), so much of the work was exchanged through ZIP files over WhatsApp.
+
+Division of work:
+
+Romaisa: Implemented the main game logic, state transitions, and the sprite-based gameplay inside the GameState.cpp and GameState.hpp and Game files.
+
+Aqsa: Handled the UI screens, background rendering, and music integration (Background.cpp/.hpp, Shooter.cpp/.hpp, and Duck.cpp/.hpp).
+
+Although the UML originally included a timer class, we chose not to implement it.
+Music is also integrated directly inside the GameState system rather than in a separate audio manager.
