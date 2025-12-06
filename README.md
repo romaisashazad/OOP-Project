@@ -1,6 +1,6 @@
 # Duck Shooting Game
 
-A small arcade-style duck shooting game built in C++ using SFML. The game starts simple—with only slow yellow ducks—but becomes progressively harder as your score increases. More duck types begin appearing, movement speeds rise, and missing or hitting the wrong ducks costs you hearts. The goal is to survive as long as possible and end with the highest score you can.
+A duck shooting game built in C++ using SFML. The game starts simple—with only slow yellow ducks—but becomes progressively harder as your score increases. More duck types begin appearing, movement speeds rise, and missing or hitting the wrong ducks costs you hearts. The goal is to survive as long as possible and end with the highest score you can.
 
 # Gameplay Overview
 1. Move the shooter using the arrow keys
@@ -12,6 +12,7 @@ A small arcade-style duck shooting game built in C++ using SFML. The game starts
 7. You begin with 3 hearts. When hearts reach 0, the game ends.
 8. Duck speed increases as your score rises.
 9. The game starts with background sound/music.
+10.  Press ESC to return to menu and ENTER to start/restart
 
 ## File Structure
 
@@ -66,14 +67,6 @@ make run
 make clean
 ```
 
-## How to Play
-
-- Use ARROW KEYS to move the cyan shooter
-- Touch the yellow ducks to shoot them
-- +10 points per duck
-- Let 3 ducks escape and you lose
-- Press ESC to return to menu
-- Press ENTER to start/restart
 ##Development Notes
 
 This project was completed collaboratively but with some version-control challenges.
@@ -81,9 +74,9 @@ Romaisa had issues committing through Git (which is why the repository shows few
 
 Division of work:
 
-Romaisa: Implemented the main game logic, state transitions, and the sprite-based gameplay inside the GameState.cpp and GameState.hpp and Game files.
+Romaisa: Implemented the state transitions, and the sprite-based gameplay inside the GameState.cpp and GameState.hpp and Game files.
 
 Aqsa: Handled the UI screens, background rendering, and music integration (Background.cpp/.hpp, Shooter.cpp/.hpp, and Duck.cpp/.hpp).
 
-Although the UML originally included a timer class, we chose not to implement it.
+Although the UML originally included a timer class, we chose not to implement it and stop the game when no lives remain.
 Music is also integrated directly inside the GameState system rather than in a separate audio manager.
