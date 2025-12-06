@@ -2,7 +2,7 @@
 
 A small arcade-style duck shooting game built in C++ using SFML. The game starts simple—with only slow yellow ducks—but becomes progressively harder as your score increases. More duck types begin appearing, movement speeds rise, and missing or hitting the wrong ducks costs you hearts. The goal is to survive as long as possible and end with the highest score you can.
 
-#Gameplay Overview
+# Gameplay Overview
 1. Move the shooter using the arrow keys
 2. Shoot yellow ducks → +10 points
 3. Once you reach 30 points, green and brown ducks start appearing
