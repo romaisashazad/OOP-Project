@@ -8,7 +8,7 @@ A duck shooting game built in C++ using SFML. The game starts simple—with only
 3. Once you reach 30 points, green and brown ducks start appearing
 4. Hitting a non-yellow duck → –15 points
 5. Hitting two non-yellow ducks in a row → lose one heart
-6. Missing a yellow duck (letting it fly off the left side) → lose one heart
+6. Missing a yellow duck (letting it fly off the right side of the screen) → lose one heart
 7. You begin with 3 hearts. When hearts reach 0, the game ends.
 8. Duck speed increases as your score rises.
 9. The game starts with background sound/music.
@@ -47,7 +47,7 @@ g++ -std=c++11 -c Background.cpp
 g++ -std=c++11 -c GameState.cpp
 g++ -std=c++11 -c Game.cpp
 g++ -std=c++11 -c main.cpp
-g++ Duck.o Shooter.o Background.o GameState.o Game.o main.o -o duck_game -lsfml-graphics -lsfml-window -lsfml-system
+g++ Duck.o Shooter.o Background.o GameState.o Game.o main.o -o duck_game -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 ```
 
 ## Running
